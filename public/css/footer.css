@@ -1,0 +1,46 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    font-family: 'Kristi', cursive;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .tools {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    list-style: none;
+}
+
+footer .tools li {
+    list-style: none;
+}
+
+footer .tools a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 35px 35px;
+    font-size: 0;
+}
+
+.tools-item {
+    /*background-image: url("../images/icons/iconmonstr-facebook-1.svg");*/
+    /*background-image: url("../images/icons/iconmonstr-twitter-1.svg");*/
+    /*background-image: url("../images/icons/iconmonstr-instagram-11.svg");*/
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}

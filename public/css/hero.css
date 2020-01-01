@@ -1,0 +1,59 @@
+.hero {
+    height: 180vh;
+    background: url("../images/img/close-up-colors-ecology-environment-631909.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero.center-wrapper {
+    max-width: 700px;
+    position: relative;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-wrapper .my-plants {
+    position: absolute;
+    top: 30%;
+    left: 46%;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.my-plants-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left:-100px;
+    width: 200px;
+    height: 120px;
+    /*background-image: url("../images/icons/my plants.svg");*/
+}
+.my-plants {
+    position: relative;
+    top: -73px;
+    left: 5px;
+    transform: translate(-50% -50%);
+    width: 200px;
+    height: 120px;
+    z-index: -1;
+    /*background-image: url("../images/icons/my plants.svg");*/
+}
+.my-plants-txt {
+    position: relative;
+    top: 45px;
+    left: 0;
+    transform: translate(-50% -50%);
+    color: white;
+    text-decoration: none;
+    font-family: 'Kristi', cursive;
+    font-size: 2rem;
+    z-index: 3;
+    /*background-image: url("../images/icons/my plants.svg");*/
+}

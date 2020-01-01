@@ -1,0 +1,207 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.form-contact-area {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    padding-top: 30px;
+    border-radius: 50px;
+}
+
+.form {
+    margin: 3rem auto;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    max-width: 40rem;
+}
+
+.form .form-row {
+    margin-bottom: 1rem;
+}
+
+.form .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form textarea,
+.form .checkbox-cnt .state {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    width: 100%;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);
+}
+
+.form textarea {
+    height: 6rem;
+    color: white;
+}
+
+.form label {
+    font-weight: bold;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.form .submit-btn {
+    border: 0;
+    height: 40px;
+    /*border-top: 3px solid #92bb5e;*/
+    /*border-left: 3px solid #92bb5e;*/
+    /*border-bottom: 2px solid #375728;*/
+    /*border-right: 2px solid #375728;*/
+    font-family: 'Raleway', sans-serif;
+    padding: 0.5rem 2rem;
+    background: rgb(150, 168, 30);
+    /*linear-gradient(90deg, rgb(150, 168, 30) 0%, rgba(85, 103, 3, 1) 100%);*/
+    border-radius: 0.6rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s background-color;
+    box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, .1);
+}
+
+/* checkbox */
+.form .submit-btn:hover {
+    background: linear-gradient(90deg, rgba(119, 146, 4, 1) 0%, rgba(85, 103, 3, 1) 100%);
+}
+
+.form .checkbox-cnt {
+    padding-left: 3rem;
+    position: relative;
+    font-weight: normal;
+    font-size: 0.85rem;
+    line-height: 1.1rem;
+    color: #f5f9ff;
+    cursor: pointer;
+}
+
+.form .checkbox-cnt .state {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #aaa;
+    border-radius: 0.2rem;
+}
+
+.form .checkbox-cnt .state:before {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    background: #96a81e;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: '';
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+.form .checkbox-cnt input:checked ~ .state:before {
+    animation: checkboxShowAnim 0.5s 1;
+    opacity: 1;
+}
+
+.form .checkbox-cnt input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+@keyframes checkboxShowAnim {
+    0% {
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/*-----------------------------------------formularz login--------------------------------------------------------- */
+
+.form-login-area {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -225px;
+    width: 450px;
+    height: 330px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 50px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.joinus {
+    text-decoration: none;
+    color: white;
+}
+
+.form-header span {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.checkbox-cnt span {
+    left: 0;
+}
+
+/*!* walidacja *!*/
+/*.form input[type=text].error,*/
+/*.form input[type=email].error,*/
+/*.form textarea.error,*/
+/*.form .checkbox-cnt input.error ~ .state {*/
+/*border-color: # #E01546;*/
+/*}*/
+
+/*.field-error {*/
+/*color: # #E01546;*/
+/*padding: 0.5rem 0;*/
+/*font-size: 0.8rem;*/
+/*}*/
+
+/*@media screen and (max-width: 500px) {*/
+/*.form .submit-btn {*/
+/*display: block;*/
+/*width: 100%;*/
+/*}*/
+/*}*/
+

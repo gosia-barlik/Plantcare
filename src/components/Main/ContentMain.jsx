@@ -1,12 +1,12 @@
 import React from "react";
-import MyPlants from "../Common/MyPlants";
+import YourPlants from "../Common/YourPlants";
 import ContactForm from "./ContactForm";
 
 class ContentMain extends React.Component {
     render() {
         return (
             <section className="hero">
-                <MyPlants/>
+                <YourPlants/>
                 <ContactForm/>
             </section>
         )

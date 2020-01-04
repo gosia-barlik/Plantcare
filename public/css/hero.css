@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.center-wrapper .my-plants {
+.center-wrapper .your-plants {
     position: absolute;
     top: 30%;
     left: 46%;
@@ -26,7 +26,7 @@
     margin-right: auto;
 
 }
-.my-plants-wrapper {
+.your-plants-wrapper {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -35,17 +35,17 @@
     height: 120px;
     /*background-image: url("../images/icons/my plants.svg");*/
 }
-.my-plants {
+.your-plants {
     position: relative;
-    top: -73px;
-    left: 5px;
+    top: -78px;
+    left: -9px;
     transform: translate(-50% -50%);
-    width: 200px;
-    height: 120px;
+    width: 250px;
+    height: 130px;
     z-index: -1;
     /*background-image: url("../images/icons/my plants.svg");*/
 }
-.my-plants-txt {
+.your-plants-txt {
     position: relative;
     top: 45px;
     left: 0;

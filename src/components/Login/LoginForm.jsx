@@ -6,7 +6,7 @@ class LoginForm extends React.Component {
     handleSubmit=(e)=>{
         e.preventDefault();
         this.setUsername();
-        this.props.history.push("/main");
+        this.props.history.push("/yourplants");
     };
 
     setUsername=()=>{
@@ -29,7 +29,7 @@ class LoginForm extends React.Component {
                     </div>
                     <div className="form-row">
                         <label>email or user name</label>
-                        <input type="email" name="email" required id="field-name" data-error="Wypełnij to pole"
+                        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole"
                             // pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+"
                         />
                     </div>
@@ -41,8 +41,9 @@ class LoginForm extends React.Component {
                         <label className="checkbox-cnt">
                             <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation"/>
                             <i className="state" aria-hidden="true"></i>
-                            <span>keep me logged in</span>
+
                         </label>
+                        <span>keep me logged in</span>
                     </div>
                     <div className="form-row">
                         <button type="submit" className="submit-btn set-name">LOG IN</button>

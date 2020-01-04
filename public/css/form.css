@@ -33,6 +33,7 @@
 
 .form input[type=text],
 .form input[type=email],
+.form input[type=date],
 .form textarea,
 .form .checkbox-cnt .state {
     color: white;
@@ -42,6 +43,72 @@
     width: 100%;
     box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);
 }
+
+/*.form-row-1 input[type=date].state {*/
+/*color: white;*/
+/*border: none;*/
+/*border-bottom: 1px solid white;*/
+/*background-color: transparent;*/
+/*width: 50%;*/
+/*box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);*/
+/*}*/
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=date],
+.form input[type=number],
+.form textarea,
+.form .checkbox-cnt .state :active {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=date],
+.form input[type=number],
+.form textarea,
+.form .checkbox-cnt .state :focus {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=date],
+.form textarea,
+.form .checkbox-cnt .state :active {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form input[type=date] {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 40%;
+}
+
+.form input[type=number] {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 10%;
+}
+
+/*.form-row-1 input[type=date].state :active {*/
+/*color: white;*/
+/*border: none;*/
+/*border-bottom: 1px solid white;*/
+/*background-color: transparent;*/
+/*width: 50%;*/
+/*box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);*/
+/*}*/
 
 .form textarea {
     height: 6rem;
@@ -88,6 +155,13 @@
     line-height: 1.1rem;
     color: #f5f9ff;
     cursor: pointer;
+}
+
+.form-row span {
+    font-size: 0.85rem;
+    position: relative;
+    left: -100px;
+    display: block;
 }
 
 .form .checkbox-cnt .state {
@@ -154,7 +228,7 @@
     left: 50%;
     margin-left: -225px;
     width: 450px;
-    height: 330px;
+    height: 280px;
     background: rgba(0, 0, 0, 0.7);
     padding: 40px;
     padding-top: 0;
@@ -183,6 +257,178 @@
 .checkbox-cnt span {
     left: 0;
 }
+
+/*-----------------------------------------formularz yourplants--------------------------------------------------------- */
+
+.form-yourplants-area {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -225px;
+    width: 450px;
+    min-height: 150px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 50px;
+}
+
+.form-yourplants-area .submit-btn {
+    padding-left: 20px;
+}
+
+.add {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5px;
+    margin-right: 8px;
+}
+
+/*-----------------------------------------formularz addplant--------------------------------------------------------- */
+
+.form-addplant-area {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    min-height: 150px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 50px;
+}
+
+.form-photo {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -70px;
+    opacity: 0;
+    color: transparent;
+
+}
+
+.input-file-wrapper {
+    position: absolute;
+}
+
+.form-photo img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.form-photo input {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.form-photo label {
+    position: absolute;
+    width: 100px;
+}
+
+#addplantForm .form-row label {
+    font-weight: 100;
+    position: relative;
+    left: 0;
+    width: 40%;
+}
+
+.addplant-form-row {
+    display: flex;
+    margin-top: 20px;
+}
+
+.addplant-form-row .form-row {
+    position: relative;
+    top: 50px;
+
+}
+
+.addplant-form-row .form-row input[type=text] {
+    margin-left: 20px;
+    width: 190%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    padding: 5px;
+}
+
+.icon-trash {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    position: relative;
+    top: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+#addplantForm .form-row-1,
+.addplant-form-row .form-row-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    top: 30px;
+
+}
+
+.addplant-form-row .form-row-1 [type="text"] {
+    width: 10%;
+}
+
+#addplantForm .form-row-1 .save-btn,
+#addplantForm .form-row-1 img {
+    background: transparent;
+    border: none;
+    position: relative;
+    top: -50%;
+}
+
+#addplantForm .form-row-1:first-child {
+    position: relative;
+    top: -50%;
+}
+#exit-icon{
+    opacity:0.5;
+    width: 30px;
+    height: 30px;
+}
+
+/*.form-photo .photo {*/
+/*width: 50px;*/
+/*height: 50px;*/
+/*position: relative;*/
+/*top: -80%;*/
+/*z-index: 0;*/
+/*cursor: pointer;*/
+
+/*}*/
 
 /*!* walidacja *!*/
 /*.form input[type=text].error,*/

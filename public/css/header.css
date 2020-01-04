@@ -18,7 +18,7 @@ header {
 
 .center-wrapper {
     width: 100%;
-    max-width: 1310px;
+    max-width: 1510px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -59,13 +59,12 @@ header {
     line-height: 40px;
     list-style: none;
     font-family: 'Raleway', sans-serif;
-    float: left;
     margin-right: 30px;
+    font-weight: bolder;
 }
 
 .main-menu li a {
     color: white;
-    text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-decoration: none;
 }

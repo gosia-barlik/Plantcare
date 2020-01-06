@@ -2,6 +2,28 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 
 class AddPlantForm extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+                plant:{
+                name:'',
+                photo:'',
+                wateringFrequency: '',
+                fertilizingFrequency: '',
+                nextWateringDate: '',
+                nextFertilizingDate: ''
+            }
+        };
+    }
+
+    componentDidMount(){
+        if(this.props.create==false){
+            const plant = this.props.firebaseDB.ref('plants/' + this.props.match.params.id);
+            plant.on('value', (snapshot)=>{
+                this.setState({plant:snapshot.val()});
+            });
+        }
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +51,7 @@ class AddPlantForm extends React.Component {
                         </div>
                         <div className="form-row">
                             <label>name</label>
-                            <input type="text" name="plant-name" data-error="Wypełnij to pole"/>
+                            <input type="text" name="plant-name" data-error="Wypełnij to pole" value={this.state.plant.name}/>
                         </div>
                     </div>
                     <div className="addplant-form-row">

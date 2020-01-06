@@ -5,7 +5,7 @@ class ContentAddPlant extends React.Component {
     render() {
         return (
             <section className="hero">
-                <AddPlantForm/>
+                <AddPlantForm create={this.props.create} firebaseDB={this.props.firebaseDB}/>
             </section>
         )
     }

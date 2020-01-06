@@ -15,10 +15,11 @@ class App extends React.Component {
                 <BrowserRouter>
                     <>
                         <Switch>
-                            <Route exact path='/' component={ContentLogin}/>
+                            <Route exact path='/' render={(props) => <ContentLogin firebaseDB={this.props.firebaseDB} {...props} />}/>
                             {/*<Route path='/main' component={ContentMain}/>*/}
-                            <Route path='/yourplants' component={ContentYourPlants}/>
-                            <Route path='/addplant' component={ContentAddPlant}/>
+                            <Route path='/yourplants' render={(props) => <ContentYourPlants firebaseDB={this.props.firebaseDB} {...props} />}/>
+                            <Route exact path='/addplant' render={(props) => <ContentAddPlant create={true} firebaseDB={this.props.firebaseDB} {...props} />}/>
+                            <Route exact path='/addplant/:id' render={(props) => <ContentAddPlant create={false} firebaseDB={this.props.firebaseDB} {...props} />}/>
                         </Switch>
                     </>
                 </BrowserRouter>

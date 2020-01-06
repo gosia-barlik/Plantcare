@@ -1,7 +1,24 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 
 class YourPlantsForm extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            plants : [],
+            loaded : true
+        };
+
+    }
+
+    componentDidMount(){
+
+        const plants = this.props.firebaseDB.ref('plants');
+        plants.on('value', (snapshot)=>{
+            this.setState({plants:snapshot.val(), loading:false});
+        });
+}
 
     handleSubmit=(e)=>{
         e.preventDefault();
@@ -17,9 +34,26 @@ class YourPlantsForm extends React.Component {
                             <img src="images/icons/iconmonstr-plus-2-240.png" alt="add"
                                  className="add"/>ADD PLANT</button>
                     </div>
-                    <div className="form-row">
-                        <div>you have no plants yet</div>
-                    </div>
+                    {this.state.plants.length>0 ?
+                        this.state.plants.map(plant=>
+                            <>
+                                <NavLink to={'/addplant/'+plant.id} key={plant.id}>
+                                <div className="addplant-form-row">
+                                    <div className="form-photo">
+                                        <img src={plant.photo}/>
+                                    </div>
+                                    <div className="form-row">
+                                        <label>plant.name</label>
+                                    </div>
+                                </div>
+                                </NavLink>
+                            </>
+                        )
+                        :
+                        <div className="form-row">
+                            <div>you have no plants yet</div>
+                        </div>
+                    }
                 </form>
             </div>
         )

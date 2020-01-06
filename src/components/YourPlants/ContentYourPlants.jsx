@@ -5,7 +5,7 @@ class ContentYourPlants extends React.Component {
     render() {
         return (
             <section className="hero">
-                <YourPlantsForm/>
+                <YourPlantsForm firebaseDB={this.props.firebaseDB}/>
             </section>
         )
     }

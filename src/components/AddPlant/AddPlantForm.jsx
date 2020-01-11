@@ -17,7 +17,7 @@ class AddPlantForm extends React.Component {
     }
 
     componentDidMount(){
-        if(this.props.create==false){
+        if(this.props.create===false){
             const plant = this.props.firebaseDB.ref('plants/' + this.props.match.params.id);
             plant.on('value', (snapshot)=>{
                 this.setState({plant:snapshot.val()});
@@ -29,14 +29,20 @@ class AddPlantForm extends React.Component {
         e.preventDefault();
         this.props.history.push("/yourplants");
     };
+    handleClose = (e) => {
+        e.preventDefault();
+        this.props.history.push("/yourplants")
+    };
 
     render() {
         return (
-            <div className="form-addplant-area">
+            <div className="form-addplant-area fade-in">
                 <form className="form" id="addplantForm" onSubmit={this.handleSubmit}>
                     <div className="form-row-1">
+                        <button type="button" onClick={this.handleClose} className="close-btn">
                     <img src="images/icons/iconmonstr-x-mark-1-240.png" alt="exit" id="exit-icon"
                          className="icon"/>
+                        </button>
                     <button type="submit" className="save-btn">
                         <img src="images/icons/iconmonstr-save-2-240.png" alt="save" id="save-icon"
                         className="icon"/>
@@ -51,7 +57,7 @@ class AddPlantForm extends React.Component {
                         </div>
                         <div className="form-row">
                             <label>name</label>
-                            <input type="text" name="plant-name" data-error="Wypełnij to pole" value={this.state.plant.name}/>
+                            <input type="text" name="plant-name" data-error="Wypełnij to pole" defaultValue={this.state.plant.name}/>
                         </div>
                     </div>
                     <div className="addplant-form-row">
@@ -109,9 +115,9 @@ class Upload extends React.Component {
     render() {
         return (
             <div className={'input-file-wrapper'}>
-                <label>ADD</label>
-                <img className="form-photo" src={this.state.file}/>
-                <input type="file" className="custom-file-input" style={{color: "transparent"}} onChange={this.handleChange}/>
+                <label><img src="images/icons/iconmonstr-instagram-11-240.png" alt="" className="icon" id ="photo-icon"/>
+                    <img className="form-photo" src={this.state.file} id={'plant-photo'}/></label>
+                <input type="file" className="custom-file-input" style={{color: "transparent"}} onChange={this.handleChange} id={'add-photo'}/>
             </div>
         );
     }

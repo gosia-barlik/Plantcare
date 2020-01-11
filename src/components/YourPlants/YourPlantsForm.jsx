@@ -27,7 +27,7 @@ class YourPlantsForm extends React.Component {
 
     render() {
         return (
-            <div className = "form-yourplants-area">
+            <div className = "form-yourplants-area fade-in">
                 <form className="form" id="yourplantsForm" onSubmit={this.handleSubmit}>
                     <div className="form-row">
                         <button type="submit" className="submit-btn">

@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div className = "form-login-area">
+            <div className = "form-login-area fade-in">
                 <form className="form" id="loginForm" onSubmit={this.handleSubmit}>
                     <div className="form-header">
                         <div>login</div>
@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
                         <span>keep me logged in</span>
                     </div>
                     <div className="form-row">
-                        <button type="submit" className="submit-btn set-name">LOG IN</button>
+                        <button type="submit" className="submit-btn set-name">LOG IN !</button>
                     </div>
                 </form>
             </div>

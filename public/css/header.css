@@ -14,6 +14,7 @@ header {
     box-shadow: 0 3px 7px 8px rgba(0, 0, 0, .1);
     margin-top: 0;
     padding-top: 15px;
+
 }
 
 .center-wrapper {
@@ -58,13 +59,11 @@ header {
 .main-menu li {
     line-height: 40px;
     list-style: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'bpreplayregular';, sans-serif;
     margin-right: 30px;
     font-weight: bolder;
-}
-
-.main-menu li a {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
 }
+

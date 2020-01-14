@@ -13,12 +13,19 @@ class YourPlantsForm extends React.Component {
     }
 
     componentDidMount(){
+        const plants = this.props.firebase.database().ref('plants');
+        plants.once('value').then((snapshot)=>{
+            const plantsArr =[];
 
-        const plants = this.props.firebaseDB.ref('plants');
-        plants.on('value', (snapshot)=>{
-            this.setState({plants:snapshot.val(), loading:false});
+            snapshot.forEach ((data)=> {
+                const plant = data.val();
+                plant.id= data.key;
+                plantsArr.push(plant);
+            });
+
+            this.setState({plants:plantsArr, loading:false});
         });
-}
+    }
 
     handleSubmit=(e)=>{
         e.preventDefault();
@@ -43,7 +50,7 @@ class YourPlantsForm extends React.Component {
                                         <img src={plant.photo}/>
                                     </div>
                                     <div className="form-row">
-                                        <label>plant.name</label>
+                                        <label>{plant.name}</label>
                                     </div>
                                 </div>
                                 </NavLink>

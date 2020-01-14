@@ -16,12 +16,12 @@ class App extends React.Component {
                     <Header/>
                     <>
                         <Switch>
-                            <Route exact path='/' render={(props) => <ContentLogin firebaseDB={this.props.firebaseDB} {...props} />}/>
+                            <Route exact path='/' render={(props) => <ContentLogin firebase={this.props.firebase} {...props} />}/>
                             {/*<Route path='/main' component={ContentMain}/>*/}
-                            <Route exact path='/about' render={(props) => <ContentAbout firebaseDB={this.props.firebaseDB} {...props} />}/>
-                            <Route exact path='/yourplants' render={(props) => <ContentYourPlants firebaseDB={this.props.firebaseDB} {...props} />}/>
-                            <Route exact path='/addplant' render={(props) => <ContentAddPlant create={true} firebaseDB={this.props.firebaseDB} {...props} />}/>
-                            <Route exact path='/addplant/:id' render={(props) => <ContentAddPlant create={false} firebaseDB={this.props.firebaseDB} {...props} />}/>
+                            <Route exact path='/about' render={(props) => <ContentAbout firebase={this.props.firebase} {...props} />}/>
+                            <Route exact path='/yourplants' render={(props) => <ContentYourPlants firebase={this.props.firebase} {...props} />}/>
+                            <Route exact path='/addplant' render={(props) => <ContentAddPlant create={true} firebase={this.props.firebase} {...props} />}/>
+                            <Route exact path='/addplant/:id' render={(props) => <ContentAddPlant create={false} firebase={this.props.firebase} {...props} />}/>
                         </Switch>
                     </>
                 </BrowserRouter>

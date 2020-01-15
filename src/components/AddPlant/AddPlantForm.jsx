@@ -66,7 +66,7 @@ class AddPlantForm extends React.Component {
         }
 
         this.setState({plant})
-    }
+    };
 
     handlePhotoChange = (e) => {
         const plant = {...this.state.plant };
@@ -116,23 +116,23 @@ class AddPlantForm extends React.Component {
                         <img src="images/icons/iconfinder_drop_226581.png" alt="watering" className="icon"/>
                         <div className="form-row-1">
                             <span> every </span>
-                            <input type="number" name="wateringFrequency" onChange={this.handleChange} data-error="Wypełnij to pole"/>
+                            <input type="number" name="wateringFrequency" onChange={this.handleChange} data-error="Wypełnij to pole" defaultValue={this.state.plant.wateringFrequency}/>
                             <span> days </span>
-                            <span> starting at</span>
-                            <input type="date" name="nextWateringDate" onChange={this.handleChange} data-error="Wypełnij to pole"/>
+                            <span> next</span>
+                            <input type="date" name="nextWateringDate" onChange={this.handleChange} data-error="Wypełnij to pole" defaultValue={this.state.plant.nextWateringDate}/>
                         </div>
-                        <img src="images/icons/iconmonstr-trash-can-16-240.png" alt="icon" className="icon-trash"/>
+                        {/*<img src="images/icons/iconmonstr-trash-can-16-240.png" alt="icon" className="icon-trash"/>*/}
                     </div>
                     <div className="addplant-form-row">
                         <img src="images/icons/iconmonstr-eyedropper-3-240.png" onChange={this.handleChange} alt="fertilizing" className="icon"/>
                         <div className="form-row-1">
                             <span> every </span>
-                            <input type="number" name="fertilizingFrequency" onChange={this.handleChange} data-error="Wypełnij to pole"/>
+                            <input type="number" name="fertilizingFrequency" onChange={this.handleChange} data-error="Wypełnij to pole" defaultValue={this.state.plant.fertilizingFrequency}/>
                             <span> days </span>
-                            <span> starting at</span>
-                            <input type="date" name="nextFertilizingDate" onChange={this.handleChange} data-error="Wypełnij to pole"/>
+                            <span> next</span>
+                            <input type="date" name="nextFertilizingDate" onChange={this.handleChange} data-error="Wypełnij to pole" defaultValue={this.state.plant.nextFertilizingDate}/>
                         </div>
-                        <img src="images/icons/iconmonstr-trash-can-16-240.png" alt="icon" className="icon-trash"/>
+                        {/*<img src="images/icons/iconmonstr-trash-can-16-240.png" alt="icon" className="icon-trash"/>*/}
                     </div>
 
 

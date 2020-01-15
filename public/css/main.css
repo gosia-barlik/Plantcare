@@ -4,6 +4,7 @@
 @import "hero.css";
 @import "form.css";
 @import "preloader.css";
+@import "modal.css";
 
 @font-face {
     font-family: 'bpreplayregular';

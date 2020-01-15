@@ -333,6 +333,10 @@ input:focus + label {
     justify-content: center;
     align-items: center;
 }
+.addplant-form-row .form-row-2 {
+    position:relative;
+    left:80px;
+}
 
 .form-yourplants-area .submit-btn {
     padding-left: 20px;
@@ -398,41 +402,6 @@ input:focus + label {
     left: 0;
 }
 
-/*.submit-btn-add {*/
-/*position: relative;*/
-/*cursor: pointer;*/
-/*outline: none;*/
-/*border: 0;*/
-/*vertical-align: middle;*/
-/*text-decoration: none;*/
-/*background: transparent;*/
-/*padding: 0;*/
-/*font-size: inherit;*/
-/*font-family: inherit;*/
-/*width: 12rem;*/
-/*height: auto;*/
-/*display: flex;*/
-/*align-items: center;*/
-/*justify-content: center*/
-/*}*/
-
-/*.circle {*/
-/*transition: width 1s;*/
-/*position: relative;*/
-/*margin: 0;*/
-/*width: 3rem;*/
-/*height: 3rem;*/
-/*background: #96a81e;*/
-/*border-radius: 1.625rem;*/
-/*display: flex;*/
-/*align-items: center;*/
-/*justify-content: center*/
-/*}*/
-
-/*.circle:hover {*/
-/*width: 200px;*/
-/*background: linear-gradient(90deg, rgba(119, 146, 4, 1) 0%, rgba(85, 103, 3, 1) 100%);*/
-/*}*/
 
 /*-----------------------------------------formularz addplant--------------------------------------------------------- */
 
@@ -510,8 +479,8 @@ input:focus + label {
 .addplant-form-row .form-row {
     position: relative;
     top: 50px;
-
 }
+
 
 .addplant-form-row .form-row input[type=text] {
     margin-left: 20px;
@@ -539,15 +508,15 @@ input:focus + label {
     transform: scale(0.95);
 }
 
-.icon-trash {
+.icon-trash,
+.icon-edit {
     width: 20px;
     height: 20px;
     opacity: 0.7;
     position: relative;
     top: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 10px;
-
 }
 
 #addplantForm .form-row-1,
@@ -583,12 +552,21 @@ input:focus + label {
 }
 
 #exit-icon {
+    position:relative;
     opacity: 0.5;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     z-index: 999;
+    top:-50px;
 }
-
+#save-icon {
+    position:relative;
+    opacity: 0.8;
+    width: 35px;
+    height: 35px;
+    z-index: 999;
+    top:-50px;
+}
 .input-file-wrapper label img {
     display: flex;
     justify-content: center;
@@ -596,6 +574,22 @@ input:focus + label {
     left: 30%;
     width: 40px;
     height: 40px;
+}
+
+/*.addplant-form-row .form-row-2 {*/
+/*display:flex;*/
+/*flex-direction: column;*/
+/*align-items: left;*/
+/*}*/
+
+.addplant-form-row .form-row-1 p {
+    margin-top: 10px;
+    margin-left: 40px;
+    float: left
+}
+
+.addplant-form-row .form-row-2 textarea {
+    margin-left: 40px;
 }
 
 /*----------------------------------------------------About--------------------------------------------------------------------*/

@@ -1,7 +1,7 @@
 .hero {
     height: 180vh;
     background: url("../images/img/close-up-colors-ecology-environment-631909.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     text-align: center;
 }

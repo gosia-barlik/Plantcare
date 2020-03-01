@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/Plantcare/static/js/main.b791107e.chunk.js",
+    "main.js.map": "/Plantcare/static/js/main.b791107e.chunk.js.map",
+    "runtime-main.js": "/Plantcare/static/js/runtime-main.569301af.js",
+    "runtime-main.js.map": "/Plantcare/static/js/runtime-main.569301af.js.map",
+    "static/js/2.a5413c5a.chunk.js": "/Plantcare/static/js/2.a5413c5a.chunk.js",
+    "static/js/2.a5413c5a.chunk.js.map": "/Plantcare/static/js/2.a5413c5a.chunk.js.map",
+    "index.html": "/Plantcare/index.html",
+    "precache-manifest.417cc862d4c5508d842e237176947159.js": "/Plantcare/precache-manifest.417cc862d4c5508d842e237176947159.js",
+    "service-worker.js": "/Plantcare/service-worker.js",
+    "static/js/2.a5413c5a.chunk.js.LICENSE": "/Plantcare/static/js/2.a5413c5a.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.569301af.js",
+    "static/js/2.a5413c5a.chunk.js",
+    "static/js/main.b791107e.chunk.js"
+  ]
+}

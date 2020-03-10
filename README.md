@@ -1,3 +1,15 @@
+# Plantcare
+
+Application deticated to home-gardeners.
+Simple online garden log book.
+
+### Technologies
+- React
+- CSS
+
+### To Do
+- notifications
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
